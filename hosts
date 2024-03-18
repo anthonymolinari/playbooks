@@ -4,9 +4,10 @@ temescal ansible_host=10.32.1.11 ansible_user=anthony
 [fedora]
 fragile
 
+[ubuntu]
+temescal
+
 [docker]
 fragile
 temescal
 
-[openSUSE]
-temescal
