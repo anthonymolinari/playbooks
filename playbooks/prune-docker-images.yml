@@ -1,0 +1,10 @@
+---
+
+- hosts: docker 
+  tasks:
+    - name: prune unused docker images
+      docker_prune:
+        images: true
+        images_filters:
+          dangling: false
+

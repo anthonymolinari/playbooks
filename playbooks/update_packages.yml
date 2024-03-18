@@ -1,0 +1,10 @@
+---
+
+- hosts: fedora
+  become: true
+  tasks:
+    - name: update packages via dnf
+      dnf:
+        name: "*"
+        state: latest
+

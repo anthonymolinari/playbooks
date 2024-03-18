@@ -1,0 +1,20 @@
+name: update hosts file
+
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main']
+    paths:
+      - 'hosts'
+
+jobs:
+  update_hosts:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: update global hosts file
+        run: sudo mv ./hosts /etc/ansible/hosts
+
